@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
 
-export default class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: ''};
-  }
-
+import loginForm from './loginForm'
+class login extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <TextInput
-          style={{height: 40}}
-          placeholder="Username"
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-        />
-      </View>
+        <View style={styles.loginContainer}>
+                    <Image resizeMode="contain" style={styles.logo} source={require('../components/images/Sledge.png')} />
+         </View>
+
+            <View style={styles.formContainer}>
+                   <LoginForm />
+            </View>
+       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
-	}
+  container: {
+      flex: 1,
+      backgroundColor: '#2c3e50',
+  },
+  loginContainer:{
+      alignItems: 'center',
+      flexGrow: 1,
+      justifyContent: 'center'
+  },
+  logo: {
+      position: 'absolute',
+      width: 300,
+      height: 100
+  }
 });
