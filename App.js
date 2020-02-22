@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+
 
 import TestMenu from './src/components/assassin';
+import Login from './src/components/login'
 
 export default class App extends Component {
 	render() {
-		return <TestMenu />;
+		return (
+      <>
+
+      <Login />
+
+      </>
+    );
+
 	}
 }
+
+
 
 /*
 export default function App() {
