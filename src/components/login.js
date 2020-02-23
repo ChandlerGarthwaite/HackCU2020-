@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Image} from 'react-native';
 
-import loginForm from './loginForm'
-class login extends Component{
+import LoginForm from './loginForm'
+
+export default class Login extends Component{
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.loginContainer}>
-                    <Image resizeMode="contain" style={styles.logo} source={require('../components/images/Sledge.png')} />
+                    <Image resizeMode="contain" style={styles.logo} source={require('./Sledge.png')} />
          </View>
 
-            <View style={styles.formContainer}>
-                   <LoginForm />
-            </View>
-       </View>
+
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: '#2c3e50',
+    flex: 1,
+    backgroundColor: '#2c3e50',
   },
   loginContainer:{
       alignItems: 'center',
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
   },
   logo: {
       position: 'absolute',
-      width: 300,
-      height: 100
-  }
+      width: 500,
+      height: 200
+  },
 });
