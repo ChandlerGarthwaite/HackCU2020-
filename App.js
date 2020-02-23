@@ -3,7 +3,7 @@ import { StyleSheet, Text} from 'react-native';
 
 
 //import TestMenu from './src/components/assassin';
-import Login from './src/components/Login';
+import Login from './src/components/login';
 
 export default class App extends Component {
 	render() {
@@ -22,4 +22,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
-

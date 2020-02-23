@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Image} from 'react-native';
 
-//import LoginForm from './LoginForm'
+import LoginForm from './loginForm'
 
 export default class Login extends Component{
   render() {
@@ -11,7 +11,7 @@ export default class Login extends Component{
                     <Image resizeMode="contain" style={styles.logo} source={require('./Sledge.png')} />
          </View>
 
-            
+
       </View>
     );
   }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   logo: {
       position: 'absolute',
-      width: 300,
-      height: 100
+      width: 500,
+      height: 200
   },
 });
