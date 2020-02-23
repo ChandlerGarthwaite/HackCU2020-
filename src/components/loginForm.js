@@ -1,52 +1,41 @@
 import React, { Component } from 'react';
-import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar,Fomr} from 'react-native';
+
 
 export default class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
     render() {
-        return (
-            <View style={StyleSheet.container}>
-                <TextInput style = {styles.input} 
-                    autoCapitalize="none" 
-                    onSubmitEditing={() => this.passwordInput.focus()} 
-                    autoCorrect={false} 
-                    keyboardType='email-address' 
-                    returnKeyType="next" 
-                    placeholder='Email or Mobile Num' 
-                    placeholderTextColor='rgba(225,225,225,0.7)'/>
-
-                <TextInput style = {styles.input}   
-                    returnKeyType="go" 
-                    ref={(input)=> this.passwordInput = input} 
-                    placeholder='Password' 
-                    placeholderTextColor='rgba(225,225,225,0.7)' 
-                    secureTextEntry/>
-
-                <TouchableOpacity style={styles.buttonContainer} 
-                        onPress={onButtonPress}>
-                    <Text  style={styles.buttonText}>LOGIN</Text>
-                </TouchableOpacity> 
-            </View>
-        )
+      return (
+        <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      );
     }
-}
+  }
 const styles = StyleSheet.create({
     container: {
-     padding: 20
-    },
-    input:{
-        height: 40,
-        backgroundColor: 'rgba(225,225,225,0.2)',
-        marginBottom: 10,
-        padding: 10,
-        color: '#fff'
-    },
-    buttonContainer:{
-        backgroundColor: '#2980b6',
-        paddingVertical: 15
-    },
-    buttonText:{
-        color: '#fff',
-        textAlign: 'center',
-        fontWeight: '700'
-    }
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }
 });
