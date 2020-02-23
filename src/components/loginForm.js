@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar} from 'react-native';
 
-class LoginForm extends Component {
+export default class LoginForm extends Component {
     render() {
         return (
             <View style={StyleSheet.container}>
