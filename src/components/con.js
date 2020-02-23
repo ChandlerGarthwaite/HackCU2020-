@@ -1,52 +1,36 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 
-function assassin({navigation}) {
-  const pressHandlercreate = () => {
-    navigation.navigate('create');
-  };
-  const pressHandlerprof = () => {
-    navigation.navigate('profile');
-  };
-
-    const pressHandlercon = () => {
-      navigation.navigate('continue');
-    };
-
-    const pressHandlergame = () => {
-      navigation.navigate('joingame');
-    };
-    
+function con(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.buttonStack}>
+      <View style={styles.button1Stack}>
         <TouchableOpacity
-          onPress={pressHandlercreate}
-          style={styles.button}
+          onPress={() => props.navigation.navigate("Target")}
+          style={styles.button1}
         ></TouchableOpacity>
-        <Text style={styles.create}>Create</Text>
+        <Text style={styles.target}>Target</Text>
       </View>
       <View style={styles.button2Stack}>
         <TouchableOpacity
-          onPress={pressHandlerprof}
+          onPress={() => props.navigation.navigate("Create")}
           style={styles.button2}
         ></TouchableOpacity>
+        <Text style={styles.tracker}>Tracker</Text>
+      </View>
+      <View style={styles.button3Stack}>
         <TouchableOpacity
-          onPress={pressHandlercon}
+          onPress={() => props.navigation.navigate("Create")}
           style={styles.button3}
         ></TouchableOpacity>
-        <Text style={styles.profile1}>Profile</Text>
-      </View>
-      <View style={styles.rect3Stack}>
-        <View style={styles.rect3}></View>
-        <Text style={styles.joinGame}>Join Game</Text>
+        <Text style={styles.shop}>Shop</Text>
       </View>
       <View style={styles.button4Stack}>
         <TouchableOpacity
-          onPress={pressHandlergame}
+          onPress={() => props.navigation.navigate("Create")}
           style={styles.button4}
         ></TouchableOpacity>
-        <Text style={styles.username3}>Continue</Text>
+        <Text style={styles.map2}>Map</Text>
       </View>
     </View>
   );
@@ -57,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgba(0,0,0,1)"
   },
-  button: {
+  button1: {
     top: 1,
     left: 0,
     width: 170,
@@ -66,7 +50,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     borderRadius: 50
   },
-  create: {
+  target: {
     top: 0,
     left: 30,
     width: 110,
@@ -76,14 +60,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: "courier-regular"
   },
-  buttonStack: {
+  button1Stack: {
     width: 170,
     height: 30,
-    marginTop: 263,
+    marginTop: 265,
     marginLeft: 102
   },
   button2: {
-    top: 0,
+    top: 1,
     left: 0,
     width: 170,
     height: 29,
@@ -91,20 +75,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     borderRadius: 50
   },
-  button3: {
+  tracker: {
     top: 0,
-    left: 1,
-    width: 170,
-    height: 29,
-    backgroundColor: "rgba(0,0,0,1)",
-    position: "absolute",
-    borderRadius: 50,
-    overflow: "hidden"
-  },
-  profile1: {
-    top: 0,
-    left: 22,
-    width: 127,
+    left: 18,
+    width: 132,
     height: 30,
     color: "rgba(0,232,44,1)",
     position: "absolute",
@@ -112,13 +86,13 @@ const styles = StyleSheet.create({
     fontFamily: "courier-regular"
   },
   button2Stack: {
-    width: 171,
+    width: 170,
     height: 30,
-    marginTop: 8,
-    marginLeft: 102
+    marginTop: 4,
+    marginLeft: 103
   },
-  rect3: {
-    top: 0,
+  button3: {
+    top: 1,
     left: 0,
     width: 170,
     height: 29,
@@ -126,20 +100,20 @@ const styles = StyleSheet.create({
     position: "absolute",
     borderRadius: 50
   },
-  joinGame: {
+  shop: {
     top: 0,
-    left: 2,
-    width: 169,
+    left: 44,
+    width: 83,
     height: 30,
     color: "rgba(0,232,44,1)",
     position: "absolute",
     fontSize: 30,
     fontFamily: "courier-regular"
   },
-  rect3Stack: {
-    width: 171,
+  button3Stack: {
+    width: 170,
     height: 30,
-    marginTop: 45,
+    marginTop: 7,
     marginLeft: 102
   },
   button4: {
@@ -149,13 +123,12 @@ const styles = StyleSheet.create({
     height: 29,
     backgroundColor: "rgba(0,0,0,1)",
     position: "absolute",
-    borderRadius: 50,
-    overflow: "hidden"
+    borderRadius: 50
   },
-  username3: {
+  map2: {
     top: 0,
-    left: 13,
-    width: 144,
+    left: 56,
+    width: 58,
     height: 30,
     color: "rgba(0,232,44,1)",
     position: "absolute",
@@ -165,9 +138,9 @@ const styles = StyleSheet.create({
   button4Stack: {
     width: 170,
     height: 30,
-    marginTop: -64,
+    marginTop: 10,
     marginLeft: 102
   }
 });
 
-export default assassin;
+export default con;
