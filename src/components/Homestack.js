@@ -2,6 +2,7 @@ import  {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import login from './login'
 import menu from './assassin'
+import radar from './radar'
 
 const screens = {
   login: {
@@ -9,6 +10,9 @@ const screens = {
   },
   menu: {
     screen: menu
+  },
+  radar: {
+	screen: radar
   }
 }
 
