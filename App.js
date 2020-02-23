@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text} from 'react-native';
+import Navigator from './src/components/Homestack';
 
 
 //import TestMenu from './src/components/assassin';
-import Login from './src/components/Login';
+import Login from './src/components/login';
 
 export default class App extends Component {
-	render() {
+	
+  render() {
 		return (
-      <Login />
+      <Navigator />
     );
 	}
 }
