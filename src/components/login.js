@@ -7,10 +7,7 @@ export default class Login extends Component{
   render() {
     return (
         
-
-            <View style={styles.loginContainer}>
                    <LoginForm />
-            </View>
       
     );
   }
@@ -24,7 +21,9 @@ const styles = StyleSheet.create({
   loginContainer:{
       alignItems: 'center',
       flexGrow: 1,
-      justifyContent: 'center'
+      justifyContent: 'center',
+      width: 375,
+      height: 812
   },
   logo: {
       position: 'absolute',

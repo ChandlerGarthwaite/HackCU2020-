@@ -1,40 +1,28 @@
-import React, { Component } from 'react';
-import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar} from 'react-native';
+import * as React from 'react';
+import { Text, Navigation, TouchableOpacity, TextInput, View, Button, StyleSheet } from 'react-native';
 
-
-export default class LoginForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+function LoginForm(props) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.assassin}>Assassin</Text>
+      <View style={styles.rect}></View>
+      <View style={styles.rect1}></View>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate('Assassin')}
+        style={styles.button}
+      >
+        <Text style={styles.submit}>Submit</Text>
+      </TouchableOpacity>
+      <Text style={styles.username}>Username</Text>
+      <Text style={styles.password}>Password</Text>
+      <View style={styles.rect3}></View>
+    </View>
+  );
+  }
+  function Assassin(props) {
+    return <View style={styles.container}></View>;
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-    render() {
-      return (
-        <View style={styles.container}>
-        <Text style={styles.assassin}>Assassin</Text>
-        <View style={styles.rect}></View>
-        <View style={styles.rect1}></View>
-        <View style={styles.rect2Stack}>
-          <View style={styles.rect2}></View>
-          <Text style={styles.submit}>Submit</Text>
-        </View>
-        <Text style={styles.username}>Username</Text>
-        <Text style={styles.password}>Password</Text>
-      </View>
-      );
-    }
-  }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -61,33 +49,25 @@ const styles = StyleSheet.create({
     marginTop: 48,
     alignSelf: "center"
   },
-  rect2: {
-    top: 0,
-    left: 0,
+  button: {
     width: 95,
     height: 29,
-    backgroundColor: "rgba(230, 230, 230,1)",
-    position: "absolute"
+    backgroundColor: "rgba(0,0,0,1)",
+    marginTop: 37,
+    marginLeft: 140
   },
   submit: {
-    top: 0,
-    left: 0,
-    color: "rgba(0,0,0,1)",
-    position: "absolute",
-    fontSize: 30,
-    fontFamily: "roboto-regular"
-  },
-  rect2Stack: {
-    width: 95,
-    height: 30,
-    marginTop: 30,
-    marginLeft: 178
+    color: "rgba(0,232,44,1)",
+    fontSize: 20,
+    fontFamily: "roboto-regular",
+    marginTop: 4,
+    marginLeft: 16
   },
   username: {
     color: "rgba(0,232,44,1)",
     fontSize: 30,
     fontFamily: "roboto-regular",
-    marginTop: -205,
+    marginTop: -211,
     alignSelf: "center"
   },
   password: {
@@ -96,5 +76,14 @@ const styles = StyleSheet.create({
     fontFamily: "roboto-regular",
     marginTop: 49,
     alignSelf: "center"
+  },
+  rect3: {
+    width: 0,
+    height: 0,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    marginTop: -225,
+    marginLeft: 212
   }
 });
+
+export default LoginForm;
