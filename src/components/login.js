@@ -7,15 +7,11 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-
-<<<<<<< HEAD
+//what it do boiz
 function Login({navigation}) {
   const pressHandler = () => {
     navigation.navigate('menu');
   }
-=======
-function Login(props) {
->>>>>>> d99f2f15015f11f482b1019ac129e8dbd9f2fd9d
   return (
     <View style={styles.container}>
       <View style={styles.assassinStackStackStack}>
@@ -41,11 +37,7 @@ function Login(props) {
         </View>
       </View>
       <TouchableOpacity
-<<<<<<< HEAD
         onPress={pressHandler}
-=======
-        onPress={() => props.navigation.navigate("Assassin")}
->>>>>>> d99f2f15015f11f482b1019ac129e8dbd9f2fd9d
         style={styles.button}
       >
         <Text style={styles.submit}>Submit</Text>
