@@ -16,7 +16,7 @@ function Login(props) {
           <View style={styles.assassinStack}>
             <Text style={styles.assassin}>Assassin</Text>
             <Image
-              source={require("../assets/Throwing_Star.png")}
+              source={require("./Throwing_Star.png")}
               resizeMode="contain"
               style={styles.image}
             ></Image>
@@ -54,15 +54,15 @@ const styles = StyleSheet.create({
   },
   assassin: {
     top: 0,
+    left: 0,
     color: "rgba(0,232,44,1)",
     position: "absolute",
     fontSize: 50,
-    fontFamily: "advent-pro-regular",
-    left: 0
+    fontFamily: "courier-regular"
   },
   image: {
     top: 39,
-    left: 45,
+    left: 76,
     width: 88,
     height: 128,
     position: "absolute"
@@ -70,22 +70,22 @@ const styles = StyleSheet.create({
   assassinStack: {
     top: 0,
     left: 0,
-    width: 171,
+    width: 240,
     height: 167,
     position: "absolute"
   },
   username: {
     top: 152,
-    left: 28,
+    left: 45,
     color: "rgba(0,232,44,1)",
     position: "absolute",
     fontSize: 30,
-    fontFamily: "advent-pro-regular"
+    fontFamily: "courier-regular"
   },
   assassinStackStack: {
     top: 0,
     left: 0,
-    width: 171,
+    width: 240,
     height: 182,
     position: "absolute"
   },
@@ -116,16 +116,16 @@ const styles = StyleSheet.create({
   },
   rectStack: {
     top: 175,
-    left: 0,
+    left: 31,
     width: 170,
     height: 48,
     position: "absolute"
   },
   assassinStackStackStack: {
-    width: 171,
+    width: 240,
     height: 223,
     marginTop: 97,
-    marginLeft: 102
+    marginLeft: 71
   },
   button: {
     width: 95,
@@ -137,16 +137,16 @@ const styles = StyleSheet.create({
   submit: {
     color: "rgba(0,232,44,1)",
     fontSize: 20,
-    fontFamily: "advent-pro-regular",
+    fontFamily: "courier-regular",
     marginTop: 5,
-    marginLeft: 21
+    marginLeft: 12
   },
   password: {
     color: "rgba(0,232,44,1)",
     fontSize: 30,
-    fontFamily: "advent-pro-regular",
+    fontFamily: "courier-regular",
     marginTop: -104,
-    marginLeft: 132
+    marginLeft: 115
   },
   rect4: {
     width: 170,
