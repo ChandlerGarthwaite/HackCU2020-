@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar,Fomr} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar} from 'react-native';
 
 
 export default class LoginForm extends Component {
@@ -21,13 +21,17 @@ export default class LoginForm extends Component {
   }
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+        <View style={styles.container}>
+        <Text style={styles.assassin}>Assassin</Text>
+        <View style={styles.rect}></View>
+        <View style={styles.rect1}></View>
+        <View style={styles.rect2Stack}>
+          <View style={styles.rect2}></View>
+          <Text style={styles.submit}>Submit</Text>
+        </View>
+        <Text style={styles.username}>Username</Text>
+        <Text style={styles.password}>Password</Text>
+      </View>
       );
     }
   }

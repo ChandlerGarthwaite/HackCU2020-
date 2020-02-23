@@ -20,16 +20,8 @@
     "react-native-safe-area-context": "^0.6.4",
     "react-native-screens": "^2.0.0-beta.10",
     "react-native-web": "~0.11.7",
-<<<<<<< HEAD
-    "react-navigate": "^0.6.0",
-    "react-navigation": "^4.1.1",
-    "react-navigation-stack": "^2.1.1",
-    "react-router-dom": "^5.1.2",
-    "react-transition-group": "^4.3.0"
-=======
     "react-router-dom": "^5.1.2",
     "tcomb-form-native": "^0.6.20"
->>>>>>> e97b05e959c9df09793f40551b6c9e6338a223f3
   },
   "devDependencies": {
     "babel-preset-expo": "~8.0.0",
