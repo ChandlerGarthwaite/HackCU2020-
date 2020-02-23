@@ -16,7 +16,7 @@ function Login(props) {
           <View style={styles.assassinStack}>
             <Text style={styles.assassin}>Assassin</Text>
             <Image
-              source={require("../assets/images/Throwing_Star.png")}
+              source={require("../assets/Throwing_Star.png")}
               resizeMode="contain"
               style={styles.image}
             ></Image>
