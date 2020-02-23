@@ -36,10 +36,65 @@ export default class LoginForm extends Component {
     }
   }
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }
+  container: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,1)"
+  },
+  assassin: {
+    color: "rgba(0,232,44,1)",
+    fontSize: 40,
+    fontFamily: "roboto-regular",
+    marginTop: 171,
+    alignSelf: "center"
+  },
+  rect: {
+    width: 170,
+    height: 29,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    marginTop: 254,
+    alignSelf: "center"
+  },
+  rect1: {
+    width: 170,
+    height: 29,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    marginTop: 48,
+    alignSelf: "center"
+  },
+  rect2: {
+    top: 0,
+    left: 0,
+    width: 95,
+    height: 29,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    position: "absolute"
+  },
+  submit: {
+    top: 0,
+    left: 0,
+    color: "rgba(0,0,0,1)",
+    position: "absolute",
+    fontSize: 30,
+    fontFamily: "roboto-regular"
+  },
+  rect2Stack: {
+    width: 95,
+    height: 30,
+    marginTop: 30,
+    marginLeft: 178
+  },
+  username: {
+    color: "rgba(0,232,44,1)",
+    fontSize: 30,
+    fontFamily: "roboto-regular",
+    marginTop: -205,
+    alignSelf: "center"
+  },
+  password: {
+    color: "rgba(0,232,44,1)",
+    fontSize: 30,
+    fontFamily: "roboto-regular",
+    marginTop: 49,
+    alignSelf: "center"
+  }
 });

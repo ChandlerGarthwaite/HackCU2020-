@@ -6,15 +6,12 @@ import LoginForm from './LoginForm'
 export default class Login extends Component{
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.loginContainer}>
-                    <Image resizeMode="contain" style={styles.logo} source={require('./Sledge.png')} />
-         </View>
+        
 
             <View style={styles.loginContainer}>
                    <LoginForm />
             </View>
-       </View>
+      
     );
   }
 }
