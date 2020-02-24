@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 
-function con(props) {
+function continuegame(props) {
   return (
     <View style={styles.container}>
       <View style={styles.button1Stack}>
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default con;
+export default continuegame;

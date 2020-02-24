@@ -3,7 +3,7 @@ import {createAppContainer} from 'react-navigation';
 import login from './login';
 import menu from './assassin';
 import radar from './radar';
-import con from './con';
+import continuegame from './continuegame';
 import create from './create';
 import joingame from './joingame';
 import gamecode from './gamecode';
@@ -18,8 +18,8 @@ const screens = {
   radar: {
 	screen: radar
   },
-  con: {
-  screen: con
+  continuegame: {
+  screen: continuegame
   },
   create: {
   screen: create
