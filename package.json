@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "mem": ">=4.0.0",
+    "minimist": ">=1.2.2",
     "@babel/core": "^7.0.0",
     "babel-preset-expo": "~8.0.0"
   },
